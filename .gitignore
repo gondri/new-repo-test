@@ -1,0 +1,22 @@
+# IDEA
+/.idea/*
+# share encoding settings
+!/.idea/encodings.xml
+
+# IDEA compilation output
+/build/
+/out/**
+
+# IML files are generated from Gradle - no need to version them
+*.iml
+
+# Gradle
+.gradle/
+/*/build/
+/gradle/*
+/gradlew
+/gradlew.bat
+
+#generated error files
+/*/hs_err*
+/*hs_err*
