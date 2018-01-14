@@ -1,18 +1,36 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
+    }
+}
+
 apply plugin: 'java'
-apply plugin: 'application'
 apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'app'
+    version =  '1.0.0'
+}
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 dependencies {
     compile 'com.google.guava:guava:22.0'
+    compile 'org.springframework.boot:spring-boot-starter-web'
 
     testCompile 'org.codehaus.groovy:groovy-all:2.4.12'
     testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
     testCompile 'junit:junit:4.12'
 }
 
-mainClassName = 'App'
 
